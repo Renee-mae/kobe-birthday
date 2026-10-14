@@ -70,42 +70,6 @@
         font-size: 1rem;
       }
 
-      /* Countdown Timer */
-      .countdown-container {
-        background: var(--card-bg);
-        border: 1px solid var(--accent-purple);
-        border-radius: 16px;
-        padding: 15px;
-        margin-bottom: 30px;
-        box-shadow: 0 0 15px rgba(157, 78, 221, 0.2);
-      }
-
-      .countdown-timer {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 10px;
-      }
-
-      .time-box {
-        background: rgba(157, 78, 221, 0.15);
-        padding: 10px;
-        border-radius: 10px;
-        min-width: 65px;
-      }
-
-      .time-box span {
-        display: block;
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--accent-gold);
-      }
-
-      .time-box label {
-        font-size: 0.75rem;
-        color: var(--text-muted);
-      }
-
       /* Video & Audio Section */
       .media-section {
         display: flex;
@@ -343,31 +307,10 @@
     <div class="container">
       <!-- Header -->
       <header class="hero">
-        <span class="badge">System Alert: Birthday Detected 🥳</span>
+        <span class="badge">TO MY LOVE🤭❤️</span>
         <h1>Happy Birthday, <span class="highlight">Kobe!</span></h1>
         <p class="subtitle">(And no, I'm still not spelling it 'Kobby' 🤭💜)</p>
       </header>
-
-      <!-- Countdown Section -->
-      <div class="countdown-container">
-        <p style="color: var(--text-muted); font-size: 0.9rem">
-          Countdown to October 14th 🎉
-        </p>
-        <div class="countdown-timer">
-          <div class="time-box">
-            <span id="days">00</span><label>Days</label>
-          </div>
-          <div class="time-box">
-            <span id="hours">00</span><label>Hours</label>
-          </div>
-          <div class="time-box">
-            <span id="minutes">00</span><label>Mins</label>
-          </div>
-          <div class="time-box">
-            <span id="seconds">00</span><label>Secs</label>
-          </div>
-        </div>
-      </div>
 
       <!-- Video & Audio Player Frame -->
       <div class="media-section">
@@ -403,7 +346,7 @@
             <div class="flip-card-front">
               <span class="icon">🏷️</span>
               <h3>Name Protocol</h3>
-              <p>Touch to view status</p>
+              <p>Tap to view status</p>
             </div>
             <div class="flip-card-back">
               <h3>Kobe vs Kobby</h3>
@@ -420,8 +363,8 @@
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <span class="icon">⚡</span>
-              <h3>System Specs</h3>
-              <p>Touch to run diagnostics</p>
+              <h3>Personality Traits</h3>
+              <p>Tap to run diagnostics</p>
             </div>
             <div class="flip-card-back">
               <h3>Vibe Analysis</h3>
@@ -429,7 +372,7 @@
                 <li><strong>Sweetness:</strong> 100/100</li>
                 <li><strong>Vibe Check:</strong> Passed ✨</li>
                 <li><strong>Status:</strong> Officially Older</li>
-                <li><strong>Nonchalance:Way Above The Scale🤭😂</strong></li>
+                <li><strong>Nonchalance:</strong> Way Above The Scale🤭😂</strong></li>
               </ul>
             </div>
           </div>
@@ -441,7 +384,7 @@
             <div class="flip-card-front">
               <span class="icon">💜</span>
               <h3>Special Card</h3>
-              <p>Touch to read</p>
+              <p>Tap to read</p>
             </div>
             <div class="flip-card-back">
               <h3>What Makes You Special</h3>
@@ -449,7 +392,7 @@
                 How genuine, sweet, and easy to talk to you are. You have such a
                 cool energy that's impossible not to love!. Also you have the
                 cutiest laugh ever, even tho you don't see it😪and you have such
-                pretty eyes and your voice omG!🤭 ✨
+                pretty eyes,also the imaginary dimple i see on you😂 and your voice omG!🤭 ✨
               </p>
             </div>
           </div>
@@ -461,7 +404,7 @@
             <div class="flip-card-front">
               <span class="icon">✨</span>
               <h3>Recent Encounter</h3>
-              <p>Touch to open log</p>
+              <p>Tap to open log</p>
             </div>
             <div class="flip-card-back">
               <h3>Glad We Met</h3>
@@ -479,7 +422,7 @@
             <div class="flip-card-front">
               <span class="icon">🎂</span>
               <h3>Birthday Wish</h3>
-              <p>Touch to reveal</p>
+              <p>Tap to reveal</p>
             </div>
             <div class="flip-card-back">
               <h3>Cheers to You!</h3>
@@ -546,42 +489,6 @@
     </div>
 
     <script>
-      // Countdown Timer Logic (October 14, 2026 at 12:00 AM Midnight)
-      const targetDate = new Date("October 14, 2026 00:00:00").getTime();
-
-      setInterval(function () {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        if (distance > 0) {
-          document.getElementById("days").innerText = Math.floor(
-            distance / (1000 * 60 * 60 * 24),
-          )
-            .toString()
-            .padStart(2, "0");
-          document.getElementById("hours").innerText = Math.floor(
-            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-          )
-            .toString()
-            .padStart(2, "0");
-          document.getElementById("minutes").innerText = Math.floor(
-            (distance % (1000 * 60 * 60)) / (1000 * 60),
-          )
-            .toString()
-            .padStart(2, "0");
-          document.getElementById("seconds").innerText = Math.floor(
-            (distance % (1000 * 60)) / 1000,
-          )
-            .toString()
-            .padStart(2, "0");
-        } else {
-          document.getElementById("days").innerText = "00";
-          document.getElementById("hours").innerText = "00";
-          document.getElementById("minutes").innerText = "00";
-          document.getElementById("seconds").innerText = "00";
-        }
-      }, 1000);
-
       // Quiz Verification & Confetti Trigger
       function verifyAndTrigger() {
         const q1 = document.querySelector('input[name="q1"]:checked');
