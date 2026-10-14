@@ -70,42 +70,8 @@
         font-size: 1rem;
       }
 
-      /* Countdown Timer */
-      .countdown-container {
-        background: var(--card-bg);
-        border: 1px solid var(--accent-purple);
-        border-radius: 16px;
-        padding: 15px;
-        margin-bottom: 30px;
-        box-shadow: 0 0 15px rgba(157, 78, 221, 0.2);
-      }
-
-      .countdown-timer {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 10px;
-      }
-
-      .time-box {
-        background: rgba(157, 78, 221, 0.15);
-        padding: 10px;
-        border-radius: 10px;
-        min-width: 65px;
-      }
-
-      .time-box span {
-        display: block;
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--accent-gold);
-      }
-
-      .time-box label {
-        font-size: 0.75rem;
-        color: var(--text-muted);
-      }
-
+     
+     
       /* Video & Audio Section */
       .media-section {
         display: flex;
@@ -348,27 +314,6 @@
         <p class="subtitle">(And no, I'm still not spelling it 'Kobby' 🤭💜)</p>
       </header>
 
-      <!-- Countdown Section -->
-      <div class="countdown-container">
-        <p style="color: var(--text-muted); font-size: 0.9rem">
-          Countdown to October 14th 🎉
-        </p>
-        <div class="countdown-timer">
-          <div class="time-box">
-            <span id="days">00</span><label>Days</label>
-          </div>
-          <div class="time-box">
-            <span id="hours">00</span><label>Hours</label>
-          </div>
-          <div class="time-box">
-            <span id="minutes">00</span><label>Mins</label>
-          </div>
-          <div class="time-box">
-            <span id="seconds">00</span><label>Secs</label>
-          </div>
-        </div>
-      </div>
-
       <!-- Video & Audio Player Frame -->
       <div class="media-section">
         <div class="video-frame">
@@ -546,42 +491,8 @@
     </div>
 
     <script>
-      // Countdown Timer Logic (October 14, 2026 at 12:00 AM Midnight)
-      const targetDate = new Date("October 14, 2026 00:00:00").getTime();
-
-      setInterval(function () {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        if (distance > 0) {
-          document.getElementById("days").innerText = Math.floor(
-            distance / (1000 * 60 * 60 * 24),
-          )
-            .toString()
-            .padStart(2, "0");
-          document.getElementById("hours").innerText = Math.floor(
-            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-          )
-            .toString()
-            .padStart(2, "0");
-          document.getElementById("minutes").innerText = Math.floor(
-            (distance % (1000 * 60 * 60)) / (1000 * 60),
-          )
-            .toString()
-            .padStart(2, "0");
-          document.getElementById("seconds").innerText = Math.floor(
-            (distance % (1000 * 60)) / 1000,
-          )
-            .toString()
-            .padStart(2, "0");
-        } else {
-          document.getElementById("days").innerText = "00";
-          document.getElementById("hours").innerText = "00";
-          document.getElementById("minutes").innerText = "00";
-          document.getElementById("seconds").innerText = "00";
-        }
-      }, 1000);
-
+      
+           
       // Quiz Verification & Confetti Trigger
       function verifyAndTrigger() {
         const q1 = document.querySelector('input[name="q1"]:checked');
